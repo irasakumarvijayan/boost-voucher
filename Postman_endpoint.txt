@@ -1,0 +1,51 @@
+POST /api/vouchers/generate
+
+Request Body
+{
+    "offerId" : "5",
+    "expirationDate" :"2025-10-10"
+}
+
+Response Body
+{
+    "status": 201,
+    "message": "Vouchers generated successfully"
+}
+
+POST /api/vouchers/validate
+
+{
+    "code" : "AAB2AB4E",
+    "email" :"irasakumar41@gmail.com"
+}
+
+Response Body
+{
+    "status": 400,
+    "message": "Voucher not found"
+}
+
+GET /api/vouchers/valid?email=irasakumar41@gmail.com
+
+Response Body
+{
+    "status": 200,
+    "data": [
+        {
+            "code": "12E8DC332E",
+            "offerName": "Testing2"
+        },
+        {
+            "code": "FE9B2D9A91",
+            "offerName": "Testing2"
+        },
+        {
+            "code": "52CD9C7E0F",
+            "offerName": "Testing3"
+        },
+        {
+            "code": "9E98ED459C",
+            "offerName": "Testing4"
+        }
+    ]
+}

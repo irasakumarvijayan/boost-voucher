@@ -28,3 +28,20 @@ A Spring Boot application for generating, validating, and listing voucher codes 
 
 ```sql
 CREATE DATABASE voucher;
+```
+
+---
+### Files Need to check
+```
+1. database.sql - SQL Query Statement added 
+2. Postman_endpoint - all the endpoint is listed
+```
+---
+
+### Run Commands
+
+```
+mvn clean install
+mvn spring-boot:run
+
+```
